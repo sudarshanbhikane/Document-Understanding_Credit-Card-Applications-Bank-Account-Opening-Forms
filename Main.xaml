@@ -1,0 +1,560 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,1398.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p6="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.Storage</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Editors</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.SmartData.PositionBasedExtraction</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="A local bank is looking at automating some of their incoming documents to improve the efficiency of the process. The documents lined up for the automation include Credit Card Applications and Bank Account Opening forms.  &#xD;&#xA;&#xD;&#xA;The PDF document sent to the respective department includes either the credit card application form or the account opening form. Usually, the account opening form is followed by a Know Your Customer (KYC) form. The order in which these documents are attached in the PDF file may differ. &#xD;&#xA;&#xD;&#xA;Need to extract the fields from the documents below and generate a Document Understanding workflow to process the documents by generating the extracted results in Excel files." DisplayName="Banking Data Extraction" sap:VirtualizedContainerService.HintSize="588.8,1333.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p8:DocumentTaxonomy" Name="DocTaxonomy" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\sudarshan.bhikane\OneDrive - Accenture\Documents\UiPath\Banking Application\Data\Input\AccountOpeningForm\AC Open Form and KYC\Sarah Miller Forms.pdf" Name="DocPath" />
+      <Variable x:TypeArguments="x:String" Name="DocText" />
+      <Variable x:TypeArguments="p4:Document" Name="DocObjectModel" />
+      <Variable x:TypeArguments="p5:ClassificationResult[]" Name="ClassificationResult" />
+      <Variable x:TypeArguments="p5:ExtractionResult" Name="ExctractedResult" />
+      <Variable x:TypeArguments="p5:ClassificationResult[]" Name="ValidatedClassificationResult" />
+      <Variable x:TypeArguments="p5:ExtractionResult" Name="ValidatedExtractionResult" />
+      <Variable x:TypeArguments="s:String[]" Name="FilePath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign DisplayName="Assign FolderPath" sap:VirtualizedContainerService.HintSize="526.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[FilePath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("Data\Input","*.pdf",SearchOption.AllDirectories)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="526.4,68.8" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[DocTaxonomy]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:LoadTaxonomy>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="526.4,819.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[FilePath]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="DocPath" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492.8,601.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Processing Document - &quot;+Path.GetFileNameWithoutExtension(DocPath)]" />
+            <Sequence DisplayName="Digitization" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Digitizing Document - &quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DocObjectModel]" DocumentPath="[DocPath]" DocumentText="[DocText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="387.2,68.8" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+                <p:DigitizeDocument.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
+                    <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="IWLqRSyxocIujD9ERmV256RvpDrLPpRmp+jCVSepAFSJQal5JusSXLjpbr94qayeiKv3xfzC58/9heBw4YaapQ==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000">
+                      <p1:UiPathDocumentOCR.Image>
+                        <InArgument x:TypeArguments="sd:Image">
+                          <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
+                            <DelegateInArgument x:TypeArguments="sd:Image" x:Name="__ReferenceID0" Name="Image" />
+                          </DelegateArgumentValue>
+                        </InArgument>
+                      </p1:UiPathDocumentOCR.Image>
+                      <p1:UiPathDocumentOCR.PredictionId>
+                        <InArgument x:TypeArguments="x:String">
+                          <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
+                            <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="PredictionId" />
+                          </DelegateArgumentValue>
+                        </InArgument>
+                      </p1:UiPathDocumentOCR.PredictionId>
+                    </p1:UiPathDocumentOCR>
+                  </ActivityFunc>
+                </p:DigitizeDocument.OCREngine>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p:DigitizeDocument>
+            </Sequence>
+            <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Classifying Document - &quot;]" />
+              <p2:ClassifyDocumentScope sap2010:Annotation.AnnotationText="Classify inpit Document whether it is Account Opening form, KYC Form or Credit card application form&#xD;&#xA;" ClassificationResults="[ClassificationResult]" DisplayName="Classify Document Scope" DocumentObjectModel="[DocObjectModel]" DocumentPath="[DocPath]" DocumentText="[DocText]" sap:VirtualizedContainerService.HintSize="510.4,599.2" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[DocTaxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI05ed30bee164451c9b934622fc76c5cf&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Bank.Forms.CreditCardApplicationform&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Bank.Forms.CreditCardApplicationform&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Bank.Forms.BankAccountOpening&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Bank.Forms.BankAccountOpening&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Bank.Forms.KYCForm&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Bank.Forms.KYCForm&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI05ed30bee164451c9b934622fc76c5cf&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI05ed30bee164451c9b934622fc76c5cf&quot;:[]}}">
+                <p2:ClassifyDocumentScope.Classifiers>
+                  <p2:IntelligentKeywordClassifier LearningData="{x:Null}" TimeoutMs="{x:Null}" ApiKey="IWLqRSyxocIujD9ERmV256RvpDrLPpRmp+jCVSepAFSJQal5JusSXLjpbr94qayeiKv3xfzC58/9heBw4YaapQ==" DisplayName="Intelligent Keyword Classifier" Endpoint="https://du.uipath.com/svc/intelligentkeywords" sap:VirtualizedContainerService.HintSize="233.6,212.8" sap2010:WorkflowViewState.IdRef="IntelligentKeywordClassifier_1" LearningFilePath="DocumentProcessing\IntelligentKeywordClassifier.json" PerformDocumentSplitting="True" PersistenceId="UI05ed30bee164451c9b934622fc76c5cf" SendDocumentsForAlgorithmImprovements="True" UsePageNumbers="False">
+                    <p2:IntelligentKeywordClassifier.ClassifierResult>
+                      <OutArgument x:TypeArguments="p3:ClassifierResult">
+                        <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
+                          <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassifierResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p2:IntelligentKeywordClassifier.ClassifierResult>
+                    <p2:IntelligentKeywordClassifier.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p4:Document">
+                        <DelegateArgumentValue x:TypeArguments="p4:Document">
+                          <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:IntelligentKeywordClassifier.DocumentObjectModel>
+                    <p2:IntelligentKeywordClassifier.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:IntelligentKeywordClassifier.DocumentPath>
+                    <p2:IntelligentKeywordClassifier.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:IntelligentKeywordClassifier.DocumentText>
+                    <p2:IntelligentKeywordClassifier.DocumentTypes>
+                      <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
+                        <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
+                          <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:IntelligentKeywordClassifier.DocumentTypes>
+                    <p2:IntelligentKeywordClassifier.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:IntelligentKeywordClassifier.PredictionId>
+                  </p2:IntelligentKeywordClassifier>
+                </p2:ClassifyDocumentScope.Classifiers>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p2:ClassifyDocumentScope>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Document Classify as - &quot;+ ClassificationResult(0).DocumentTypeId]" />
+              <If sap2010:Annotation.AnnotationText="Check if classification confidence is less than threshold. &#xD;&#xA;If confidence is lower then open the present classification scope, for human validation&#xD;&#xA;" Condition="[ClassificationResult(0).Confidence &lt; 0.9]" DisplayName="If Confidence is less than 90" sap:VirtualizedContainerService.HintSize="510.4,523.2" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="476.8,280" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p2:PresentClassificationStation AutomaticClassificationResults="[ClassificationResult]" DisplayName="Present Classification Station" DocumentObjectModel="[DocObjectModel]" DocumentPath="[DocPath]" DocumentText="[DocText]" sap:VirtualizedContainerService.HintSize="433.6,68.8" sap2010:WorkflowViewState.IdRef="PresentClassificationStation_1" Taxonomy="[DocTaxonomy]" ValidatedClassificationResults="[ValidatedClassificationResult]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p2:PresentClassificationStation>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="p5:ClassificationResult[]">[ClassificationResult]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="p5:ClassificationResult[]">[ValidatedClassificationResult]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
+                </If.Else>
+              </If>
+            </Sequence>
+            <Sequence DisplayName="Extraction and Export" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Extracting...  - &quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <ui:ForEach x:TypeArguments="p5:ClassificationResult" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Perform extraction step on Document having multiplr types of docs in one Doc" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="510.4,992" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ClassificationResult]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="p5:ClassificationResult">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="p5:ClassificationResult" Name="classResult" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,743.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="sd2:DataSet" Name="Dataset" />
+                        <Variable x:TypeArguments="x:String" Name="DocType" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <p6:DataExtractionScope DocumentTypeId="{x:Null}" ApplyGenerativeValidation="False" ClassificationResult="[classResult]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DocObjectModel]" DocumentPath="[DocPath]" DocumentText="[DocText]" ExtractionResult="[ExctractedResult]" FormatValuesIfPossible="True" GenerativeValidationConfidenceThreshold="99" sap:VirtualizedContainerService.HintSize="433.6,68.8" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[DocTaxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI9a1c0470c1bd4de9a109487a6c9be65e&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Bank.Forms.CreditCardApplicationform&quot;:{&quot;FieldMappings&quot;:{&quot;Bank.Forms.CreditCardApplicationform.CardtypeDomestic&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardtypeDomestic&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.CardtypeInternational&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardtypeInternational&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.CardvariantVisa&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardvariantVisa&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.CardvariantMastercard&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardvariantMastercard&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.CardvariantGold&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardvariantGold&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.CardvariantPlatinum&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardvariantPlatinum&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Firstname&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Firstname&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Middlename&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Middlename&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Lastname&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Lastname&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Nameoncard&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Nameoncard&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Mother'smaidenname&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Mother'smaidenname&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Age&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Age&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.GenderMale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.GenderMale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.GenderFemale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.GenderFemale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Dateofbirth&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Dateofbirth&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Nationality&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Nationality&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.VehicleownedCar&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleownedCar&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.VehicleownedTwoWheeler&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleownedTwoWheeler&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.VehicleOrganizationProvided&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleOrganizationProvided&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.VehicleownedNone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleownedNone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Numberofdependants-None&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependants-None&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-One&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-One&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-Two&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-Two&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-Three&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-Three&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-gt4&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-gt4&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Married-Yes&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Married-Yes&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Married-No&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Married-No&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Married-Other&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Married-Other&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Address&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Address&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.State&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.State&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.City&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.City&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Salaried&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Salaried&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Self-employed&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Self-employed&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Retired&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Retired&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.NameoftheCompany&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.NameoftheCompany&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Designation&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Designation&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Officeaddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Officeaddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.CardNo&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.CardNo&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.IssuedBank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.IssuedBank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.CreditLimit&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.CreditLimit&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;Bank.Forms.BankAccountOpening&quot;:{&quot;FieldMappings&quot;:{&quot;Bank.Forms.BankAccountOpening.CustomertypePublic&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.CustomertypePublic&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.CustomertypeStaff&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.CustomertypeStaff&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.SalutationMr&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.SalutationMr&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.SalutationMrs&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.SalutationMrs&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.SalutationMs&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.SalutationMs&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Salutationother&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Salutationother&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Fullname&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Fullname&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Dateofbirth&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Dateofbirth&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.GenderMale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.GenderMale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.GenderFemale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.GenderFemale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Nationality&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Nationality&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.MaritalstatusMarried&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.MaritalstatusMarried&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.MaritalstatusUnmarried&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.MaritalstatusUnmarried&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Maritalstatusother&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Maritalstatusother&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Overseasaddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Overseasaddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.City&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.City&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Country&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Country&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.ApplicantSignature&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.ApplicantSignature&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Passportdetails&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Passportdetails.PassportNo&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.PassportNo&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Passportdetails.IssueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.IssueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Passportdetails.PlaceofIssue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.PlaceofIssue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Passportdetails.Nationality&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.Nationality&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.BankAccountOpening.Passportdetails.ExpiryDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.ExpiryDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;Bank.Forms.KYCForm&quot;:{&quot;FieldMappings&quot;:{&quot;Bank.Forms.KYCForm.ApplicationtypeNew&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.ApplicationtypeNew&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Applicationtype-CR&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Applicationtype-CR&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Nameoftheapplicant&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Nameoftheapplicant&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Male&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Male&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Female&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Female&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Single&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Single&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Married&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Married&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Dateofbirth&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Dateofbirth&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Nationality-Indian&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Nationality-Indian&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Nationality-Other&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Nationality-Other&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.ResidentIndividual&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.ResidentIndividual&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Non-Resident&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Non-Resident&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.ForeignNational&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.ForeignNational&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Address&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Address&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Bank.Forms.KYCForm.Applicantsignature&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Bank.Forms.KYCForm.Applicantsignature&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI9a1c0470c1bd4de9a109487a6c9be65e&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI9a1c0470c1bd4de9a109487a6c9be65e&quot;:[]}}">
+                        <p6:DataExtractionScope.Extractors>
+                          <p6:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="IWLqRSyxocIujD9ERmV256RvpDrLPpRmp+jCVSepAFSJQal5JusSXLjpbr94qayeiKv3xfzC58/9heBw4YaapQ==" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="233.6,164" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UI9a1c0470c1bd4de9a109487a6c9be65e" SendDocumentsForAlgorithmImprovements="True" SerializedSettings="{}{&quot;DocTypeSettings&quot;:[{&quot;DocumentTypeId&quot;:&quot;Bank.Forms.KYCForm&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[&quot;Yes&quot;,&quot;X&quot;,&quot;V&quot;,&quot;✓&quot;,&quot;✔&quot;],&quot;BooleanSynonymsForNo&quot;:[&quot;No&quot;],&quot;CaseSensitiveSynonyms&quot;:false},{&quot;DocumentTypeId&quot;:&quot;Bank.Forms.BankAccountOpening&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[&quot;Yes&quot;,&quot;X&quot;,&quot;V&quot;,&quot;✓&quot;,&quot;✔&quot;],&quot;BooleanSynonymsForNo&quot;:[&quot;No&quot;],&quot;CaseSensitiveSynonyms&quot;:false},{&quot;DocumentTypeId&quot;:&quot;Bank.Forms.CreditCardApplicationform&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[&quot;Yes&quot;,&quot;X&quot;,&quot;V&quot;,&quot;✓&quot;,&quot;✔&quot;],&quot;BooleanSynonymsForNo&quot;:[&quot;No&quot;],&quot;CaseSensitiveSynonyms&quot;:false}]}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;Bank.Forms.KYCForm&quot;,&quot;FormId&quot;:&quot;afd60ef7&quot;,&quot;FormName&quot;:&quot;KYC Form&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,595.0,841.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;KNOW&quot;,&quot;Box&quot;:[60.55,44.28,38.41,9.87]},{&quot;Text&quot;:&quot;YOUR&quot;,&quot;Box&quot;:[60.81,85.09,35.21,9.6]},{&quot;Text&quot;:&quot;CLIENT&quot;,&quot;Box&quot;:[60.55,123.23,44.01,10.14]},{&quot;Text&quot;:&quot;(KYC)&quot;,&quot;Box&quot;:[60.28,170.17,33.34,12.8]},{&quot;Text&quot;:&quot;Application&quot;,&quot;Box&quot;:[60.55,205.92,65.88,12.54]},{&quot;Text&quot;:&quot;Form&quot;,&quot;Box&quot;:[60.55,275.27,29.61,9.87]},{&quot;Text&quot;:&quot;For&quot;,&quot;Box&quot;:[60.55,315.54,20.81,9.87]},{&quot;Text&quot;:&quot;Individual&quot;,&quot;Box&quot;:[60.55,337.95,57.61,10.14]},{&quot;Text&quot;:&quot;NEW&quot;,&quot;Box&quot;:[77.62,54.95,19.74,6.94]},{&quot;Text&quot;:&quot;CHANGE&quot;,&quot;Box&quot;:[77.89,97.89,35.21,6.67]},{&quot;Text&quot;:&quot;REQUEST&quot;,&quot;Box&quot;:[77.89,135.5,39.21,6.67]},{&quot;Text&quot;:&quot;DP&quot;,&quot;Box&quot;:[77.35,302.21,11.47,6.67]},{&quot;Text&quot;:&quot;Acknowledgement&quot;,&quot;Box&quot;:[101.62,474.25,66.95,8.0]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.ApplicationtypeNew&quot;,&quot;Box&quot;:[76.1024,41.9045,11.0782,9.6332]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Applicationtype-CR&quot;,&quot;Box&quot;:[75.6208,84.2907,9.1516,10.5965]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Nameoftheapplicant&quot;,&quot;Box&quot;:[128.6035,112.7086,287.5515,16.3765]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Male&quot;,&quot;Box&quot;:[183.5128,72.7308,10.1149,13.4865]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Female&quot;,&quot;Box&quot;:[185.9211,107.4104,10.1149,11.0782]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Single&quot;,&quot;Box&quot;:[184.9578,204.7059,9.1516,13.0048]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Married&quot;,&quot;Box&quot;:[183.9944,233.6055,13.0048,13.0048]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Dateofbirth&quot;,&quot;Box&quot;:[181.1333,336.8443,125.2044,17.16]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Nationality-Indian&quot;,&quot;Box&quot;:[198.9288,85.1644,8.8978,12.0756]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Nationality-Other&quot;,&quot;Box&quot;:[197.6577,118.8488,10.8044,15.2533]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.ResidentIndividual&quot;,&quot;Box&quot;:[213.5466,73.0889,12.0756,10.1689]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Non-Resident&quot;,&quot;Box&quot;:[213.5466,145.5422,13.9822,12.0756]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.ForeignNational&quot;,&quot;Box&quot;:[212.911,202.1066,13.3467,13.3467]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Address&quot;,&quot;Box&quot;:[315.2354,44.4889,483.022,20.3378]},{&quot;Field&quot;:&quot;Bank.Forms.KYCForm.Applicantsignature&quot;,&quot;Box&quot;:[671.782,397.2221,153.1688,40.04]}],&quot;Tables&quot;:[]},{&quot;Page&quot;:1,&quot;Size&quot;:[0.0,0.0,595.0,841.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;INSTRUCTIONS/CHECK&quot;,&quot;Box&quot;:[62.95,193.91,90.96,7.47]},{&quot;Text&quot;:&quot;LIST&quot;,&quot;Box&quot;:[63.22,286.73,17.6,6.94]},{&quot;Text&quot;:&quot;FOR&quot;,&quot;Box&quot;:[63.22,306.21,17.34,6.94]},{&quot;Text&quot;:&quot;FILLING&quot;,&quot;Box&quot;:[63.22,325.41,31.21,6.94]},{&quot;Text&quot;:&quot;IMPORTANT&quot;,&quot;Box&quot;:[89.09,31.74,38.94,6.94]},{&quot;Text&quot;:&quot;POINTS:&quot;,&quot;Box&quot;:[88.82,71.48,26.67,7.2]},{&quot;Text&quot;:&quot;Proof&quot;,&quot;Box&quot;:[333.15,31.74,17.87,6.94]},{&quot;Text&quot;:&quot;Identity&quot;,&quot;Box&quot;:[333.41,57.61,23.21,8.0]},{&quot;Text&quot;:&quot;Exemptions/clarifications&quot;,&quot;Box&quot;:[226.72,313.67,79.22,8.27]},{&quot;Text&quot;:&quot;people&quot;,&quot;Box&quot;:[347.28,332.08,21.34,8.27]},{&quot;Text&quot;:&quot;authorised&quot;,&quot;Box&quot;:[347.28,354.22,34.14,6.67]},{&quot;Text&quot;:&quot;documents:&quot;,&quot;Box&quot;:[347.55,425.7,37.34,6.67]},{&quot;Text&quot;:&quot;Documentary&quot;,&quot;Box&quot;:[473.71,115.76,51.21,8.54]},{&quot;Text&quot;:&quot;requirements&quot;,&quot;Box&quot;:[473.71,169.37,50.41,8.54]},{&quot;Text&quot;:&quot;Corporate&quot;,&quot;Box&quot;:[487.05,30.67,38.41,8.54]},{&quot;Text&quot;:&quot;Partnership&quot;,&quot;Box&quot;:[565.47,30.67,44.81,8.27]},{&quot;Text&quot;:&quot;Trust&quot;,&quot;Box&quot;:[614.01,30.41,20.27,6.93]},{&quot;Text&quot;:&quot;Institutional&quot;,&quot;Box&quot;:[757.51,30.67,45.34,7.2]},{&quot;Text&quot;:&quot;Institutional&quot;,&quot;Box&quot;:[780.45,62.15,45.88,6.67]},{&quot;Text&quot;:&quot;Registered&quot;,&quot;Box&quot;:[825.26,30.67,41.61,8.8]}],&quot;Fields&quot;:[],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;Bank.Forms.CreditCardApplicationform&quot;,&quot;FormId&quot;:&quot;f6fe663e&quot;,&quot;FormName&quot;:&quot;Credit Card&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Employee&quot;,&quot;Box&quot;:[45.07,48.8,41.07,9.87]},{&quot;Text&quot;:&quot;Branch&quot;,&quot;Box&quot;:[87.47,48.53,29.6,8.0]},{&quot;Text&quot;:&quot;CREDIT&quot;,&quot;Box&quot;:[82.4,270.67,30.93,7.73]},{&quot;Text&quot;:&quot;APPLICATION&quot;,&quot;Box&quot;:[93.87,221.33,104.53,13.6]},{&quot;Text&quot;:&quot;FORM&quot;,&quot;Box&quot;:[94.13,329.87,45.33,13.33]},{&quot;Text&quot;:&quot;variants)&quot;,&quot;Box&quot;:[110.93,288.8,34.13,8.8]},{&quot;Text&quot;:&quot;¿&quot;,&quot;Box&quot;:[40.0,413.87,134.93,21.87]},{&quot;Text&quot;:&quot;Date&quot;,&quot;Box&quot;:[87.73,398.67,20.0,7.73]},{&quot;Text&quot;:&quot;DOMESTIC&quot;,&quot;Box&quot;:[175.47,54.4,45.07,7.73]},{&quot;Text&quot;:&quot;INTERNATIONAL&quot;,&quot;Box&quot;:[175.73,154.13,69.07,7.73]},{&quot;Text&quot;:&quot;Aspire&quot;,&quot;Box&quot;:[175.2,376.8,27.47,9.6]},{&quot;Text&quot;:&quot;Titanium&quot;,&quot;Box&quot;:[198.67,187.47,33.6,8.0]},{&quot;Text&quot;:&quot;Gold&quot;,&quot;Box&quot;:[218.13,187.47,18.93,8.27]},{&quot;Text&quot;:&quot;International&quot;,&quot;Box&quot;:[240.0,54.4,55.2,7.73]},{&quot;Text&quot;:&quot;PERSONAL&quot;,&quot;Box&quot;:[267.73,53.07,86.93,14.4]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardtypeDomestic&quot;,&quot;Box&quot;:[168.9571,125.4037,19.5239,20.2748]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardtypeInternational&quot;,&quot;Box&quot;:[168.9571,251.5583,18.773,18.773]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardvariantGold&quot;,&quot;Box&quot;:[209.5067,164.4515,21.0258,18.773]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.CardvariantPlatinum&quot;,&quot;Box&quot;:[211.0086,106.6307,21.7767,21.0258]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Firstname&quot;,&quot;Box&quot;:[303.3718,146.4294,189.9828,11.2638]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Middlename&quot;,&quot;Box&quot;:[303.3718,346.1742,211.0086,12.0147]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Lastname&quot;,&quot;Box&quot;:[331.9067,246.3018,209.5067,13.5166]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Nameoncard&quot;,&quot;Box&quot;:[351.4307,144.9276,413.0061,15.0184]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Mother'smaidenname&quot;,&quot;Box&quot;:[394.984,140.4221,208.7558,16.5202]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Age&quot;,&quot;Box&quot;:[373.2074,277.8405,33.7914,15.0184]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.GenderMale&quot;,&quot;Box&quot;:[370.9546,363.4454,18.0221,20.2748]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.GenderFemale&quot;,&quot;Box&quot;:[370.9546,401.7423,16.5202,19.5239]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Dateofbirth&quot;,&quot;Box&quot;:[391.9804,399.4896,142.6748,22.5276]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Nationality&quot;,&quot;Box&quot;:[414.508,138.1693,212.5104,15.7693]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleownedCar&quot;,&quot;Box&quot;:[448.2994,121.6491,21.7767,25.5313]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleownedTwoWheeler&quot;,&quot;Box&quot;:[448.2994,158.4442,18.773,23.2785]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleOrganizationProvided&quot;,&quot;Box&quot;:[449.0503,213.2613,21.0258,21.7767]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.VehicleownedNone&quot;,&quot;Box&quot;:[444.5448,299.6172,20.2748,25.5313]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependants-None&quot;,&quot;Box&quot;:[476.8344,123.1509,21.0258,22.5276]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-One&quot;,&quot;Box&quot;:[476.0834,155.4405,19.5239,22.5276]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-Two&quot;,&quot;Box&quot;:[476.8344,188.481,18.0221,21.0258]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-Three&quot;,&quot;Box&quot;:[476.0834,218.5178,18.0221,20.2748]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Numberofdependents-gt4&quot;,&quot;Box&quot;:[476.0834,287.6025,21.0258,23.2785]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Married-Yes&quot;,&quot;Box&quot;:[477.5853,371.7055,21.0258,22.5276]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Married-No&quot;,&quot;Box&quot;:[476.8344,413.7571,22.5276,22.5276]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Married-Other&quot;,&quot;Box&quot;:[476.8344,452.8049,21.0258,20.2748]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Address&quot;,&quot;Box&quot;:[546.6699,49.5607,507.6221,37.546]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.State&quot;,&quot;Box&quot;:[610.4982,76.5939,198.2429,14.2675]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.City&quot;,&quot;Box&quot;:[587.9706,290.6061,143.4258,15.7693]}],&quot;Tables&quot;:[]},{&quot;Page&quot;:1,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;EMPLOYMENT&quot;,&quot;Box&quot;:[16.53,53.6,113.87,14.13]},{&quot;Text&quot;:&quot;DETAILS&quot;,&quot;Box&quot;:[16.53,169.33,67.2,14.4]},{&quot;Text&quot;:&quot;Salaried&quot;,&quot;Box&quot;:[41.87,138.4,28.53,7.2]},{&quot;Text&quot;:&quot;Employed&quot;,&quot;Box&quot;:[41.87,218.4,35.73,9.07]},{&quot;Text&quot;:&quot;Retired&quot;,&quot;Box&quot;:[41.87,284.8,25.6,7.2]},{&quot;Text&quot;:&quot;Name&quot;,&quot;Box&quot;:[63.2,65.07,17.33,6.93]},{&quot;Text&quot;:&quot;Office&quot;,&quot;Box&quot;:[98.93,92.27,17.07,7.2]},{&quot;Text&quot;:&quot;Classification&quot;,&quot;Box&quot;:[187.47,251.73,38.93,7.2]},{&quot;Text&quot;:&quot;Total&quot;,&quot;Box&quot;:[203.73,53.07,15.2,7.2]},{&quot;Text&quot;:&quot;Credit&quot;,&quot;Box&quot;:[321.87,52.0,18.4,7.2]},{&quot;Text&quot;:&quot;PROOF&quot;,&quot;Box&quot;:[396.8,73.87,56.27,14.4]},{&quot;Text&quot;:&quot;Business&quot;,&quot;Box&quot;:[543.2,48.53,25.87,7.2]},{&quot;Text&quot;:&quot;MANDATE&quot;,&quot;Box&quot;:[661.33,53.33,81.07,14.4]},{&quot;Text&quot;:&quot;FORM&quot;,&quot;Box&quot;:[661.33,137.87,47.73,14.13]},{&quot;Text&quot;:&quot;DEBIT&quot;,&quot;Box&quot;:[661.33,225.6,49.07,14.13]},{&quot;Text&quot;:&quot;FACILITY&quot;,&quot;Box&quot;:[661.33,277.33,70.4,14.13]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Salaried&quot;,&quot;Box&quot;:[35.2933,168.2061,20.2748,21.0258]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Self-employed&quot;,&quot;Box&quot;:[35.2933,254.562,20.2748,20.2748]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Retired&quot;,&quot;Box&quot;:[34.5423,313.8847,21.0258,20.2748]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.NameoftheCompany&quot;,&quot;Box&quot;:[51.8135,137.4184,361.1926,19.5239]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Designation&quot;,&quot;Box&quot;:[76.5939,140.4221,411.5043,15.0184]},{&quot;Field&quot;:&quot;Bank.Forms.CreditCardApplicationform.Officeaddress&quot;,&quot;Box&quot;:[93.1141,139.6712,414.508,31.5387]}],&quot;Tables&quot;:[{&quot;FieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld&quot;,&quot;Headers&quot;:[{&quot;FieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.CardNo&quot;,&quot;Box&quot;:[330.0729,99.0219,30.1618,7.9673]},{&quot;FieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.IssuedBank&quot;,&quot;Box&quot;:[328.9347,184.9546,67.1528,8.5364]},{&quot;FieldId&quot;:&quot;Bank.Forms.CreditCardApplicationform.Creditcardsheld.CreditLimit&quot;,&quot;Box&quot;:[329.5038,327.2274,47.8037,10.2436]}],&quot;Cells&quot;:[{&quot;Row&quot;:0,&quot;Column&quot;:0,&quot;Box&quot;:[338.6092,97.3146,69.9982,11.3818]},{&quot;Row&quot;:0,&quot;Column&quot;:1,&quot;Box&quot;:[340.3165,188.3692,100.16,12.52]},{&quot;Row&quot;:0,&quot;Column&quot;:2,&quot;Box&quot;:[340.3165,327.2274,59.7546,9.1055]},{&quot;Row&quot;:1,&quot;Column&quot;:0,&quot;Box&quot;:[352.8365,99.5909,67.7218,13.0891]},{&quot;Row&quot;:1,&quot;Column&quot;:1,&quot;Box&quot;:[353.4056,188.3692,71.1364,14.2273]},{&quot;Row&quot;:1,&quot;Column&quot;:2,&quot;Box&quot;:[354.5438,329.5038,42.6818,12.52]},{&quot;Row&quot;:2,&quot;Column&quot;:0,&quot;Box&quot;:[369.9092,99.0219,71.1364,10.8127]},{&quot;Row&quot;:2,&quot;Column&quot;:1,&quot;Box&quot;:[369.9092,186.6619,79.6728,13.0891]},{&quot;Row&quot;:2,&quot;Column&quot;:2,&quot;Box&quot;:[368.7711,327.2274,44.3891,13.0891]}]}]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;Bank.Forms.BankAccountOpening&quot;,&quot;FormId&quot;:&quot;3adefa39&quot;,&quot;FormName&quot;:&quot;Bank Account Opening Form&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Account&quot;,&quot;Box&quot;:[77.07,378.4,27.47,6.4]},{&quot;Text&quot;:&quot;Opening&quot;,&quot;Box&quot;:[77.07,406.93,27.73,7.73]},{&quot;Text&quot;:&quot;Form:&quot;,&quot;Box&quot;:[77.33,436.53,18.93,6.13]},{&quot;Text&quot;:&quot;State&quot;,&quot;Box&quot;:[88.0,106.13,20.0,8.27]},{&quot;Text&quot;:&quot;Bank&quot;,&quot;Box&quot;:[88.0,128.8,19.73,8.27]},{&quot;Text&quot;:&quot;India&quot;,&quot;Box&quot;:[88.0,163.47,20.0,8.27]},{&quot;Text&quot;:&quot;(Branch&quot;,&quot;Box&quot;:[108.8,339.47,19.2,6.4]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.CustomertypePublic&quot;,&quot;Box&quot;:[127.761,122.6391,7.6827,6.5445]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.CustomertypeStaff&quot;,&quot;Box&quot;:[127.761,153.0855,9.39,7.6827]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.SalutationMr&quot;,&quot;Box&quot;:[145.4028,122.07,8.5364,7.6827]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.SalutationMrs&quot;,&quot;Box&quot;:[144.5491,210.2792,9.1055,7.9673]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.SalutationMs&quot;,&quot;Box&quot;:[144.5491,166.1746,8.2518,7.9673]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.Salutationother&quot;,&quot;Box&quot;:[144.8337,256.091,9.39,8.2518]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.Fullname&quot;,&quot;Box&quot;:[152.5164,79.6728,405.1929,9.6745]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.Dateofbirth&quot;,&quot;Box&quot;:[180.971,112.111,67.7218,10.8127]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.GenderMale&quot;,&quot;Box&quot;:[181.5733,233.3281,9.9197,9.9197]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.GenderFemale&quot;,&quot;Box&quot;:[181.5733,264.381,9.9197,10.351]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.Nationality&quot;,&quot;Box&quot;:[179.8481,368.322,116.0171,9.9197]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.MaritalstatusMarried&quot;,&quot;Box&quot;:[193.2181,337.7004,9.4884,10.351]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.MaritalstatusUnmarried&quot;,&quot;Box&quot;:[193.6494,368.322,10.351,10.7823]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.Maritalstatusother&quot;,&quot;Box&quot;:[194.0807,407.5695,9.4884,9.4884]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.Overseasaddress&quot;,&quot;Box&quot;:[219.6692,77.3964,406.9002,20.4873]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.City&quot;,&quot;Box&quot;:[241.8637,91.0546,121.2164,9.1055]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.Country&quot;,&quot;Box&quot;:[241.8637,336.3329,125.2,9.6745]},{&quot;Field&quot;:&quot;Bank.Forms.BankAccountOpening.ApplicantSignature&quot;,&quot;Box&quot;:[611.773,287.9601,199.1819,30.1618]}],&quot;Tables&quot;:[{&quot;FieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails&quot;,&quot;Headers&quot;:[{&quot;FieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.PassportNo&quot;,&quot;Box&quot;:[354.5438,101.2982,49.5109,9.1055]},{&quot;FieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.IssueDate&quot;,&quot;Box&quot;:[354.5438,188.3692,37.56,8.5364]},{&quot;FieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.PlaceofIssue&quot;,&quot;Box&quot;:[353.9747,260.6437,47.8037,9.1055]},{&quot;FieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.Nationality&quot;,&quot;Box&quot;:[353.9747,356.251,52.9255,9.1055]},{&quot;FieldId&quot;:&quot;Bank.Forms.BankAccountOpening.Passportdetails.ExpiryDate&quot;,&quot;Box&quot;:[354.5438,434.2165,42.6818,7.3982]}],&quot;Cells&quot;:[{&quot;Row&quot;:0,&quot;Column&quot;:0,&quot;Box&quot;:[364.2183,77.3964,97.8837,15.0809]},{&quot;Row&quot;:0,&quot;Column&quot;:1,&quot;Box&quot;:[364.2183,175.2801,66.0146,15.0809]},{&quot;Row&quot;:0,&quot;Column&quot;:2,&quot;Box&quot;:[364.2183,241.2946,91.0546,15.0809]},{&quot;Row&quot;:0,&quot;Column&quot;:3,&quot;Box&quot;:[364.2183,332.3492,93.3309,15.0809]},{&quot;Row&quot;:0,&quot;Column&quot;:4,&quot;Box&quot;:[364.2183,425.6802,61.7464,15.0809]}]}]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
+                            <p6:FormExtractor.DocumentBounds>
+                              <InArgument x:TypeArguments="p5:ResultsDocumentBounds">
+                                <DelegateArgumentValue x:TypeArguments="p5:ResultsDocumentBounds">
+                                  <DelegateInArgument x:TypeArguments="p5:ResultsDocumentBounds" Name="DocumentBounds" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p6:FormExtractor.DocumentBounds>
+                            <p6:FormExtractor.DocumentObjectModel>
+                              <InArgument x:TypeArguments="p4:Document">
+                                <DelegateArgumentValue x:TypeArguments="p4:Document">
+                                  <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p6:FormExtractor.DocumentObjectModel>
+                            <p6:FormExtractor.DocumentPath>
+                              <InArgument x:TypeArguments="x:String">
+                                <DelegateArgumentValue x:TypeArguments="x:String">
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p6:FormExtractor.DocumentPath>
+                            <p6:FormExtractor.DocumentText>
+                              <InArgument x:TypeArguments="x:String">
+                                <DelegateArgumentValue x:TypeArguments="x:String">
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p6:FormExtractor.DocumentText>
+                            <p6:FormExtractor.ExtractorDocumentType>
+                              <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                                <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                                  <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p6:FormExtractor.ExtractorDocumentType>
+                            <p6:FormExtractor.ExtractorResult>
+                              <OutArgument x:TypeArguments="p7:ExtractorResult">
+                                <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                                  <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+                                </DelegateArgumentReference>
+                              </OutArgument>
+                            </p6:FormExtractor.ExtractorResult>
+                            <p6:FormExtractor.PredictionId>
+                              <InArgument x:TypeArguments="x:String">
+                                <DelegateArgumentValue x:TypeArguments="x:String">
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                                </DelegateArgumentValue>
+                              </InArgument>
+                            </p6:FormExtractor.PredictionId>
+                          </p6:FormExtractor>
+                        </p6:DataExtractionScope.Extractors>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </p6:DataExtractionScope>
+                      <ui:ForEach x:TypeArguments="p5:ResultsValue" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ExctractedResult.ResultsDocument.Fields(0).Values]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="p5:ResultsValue">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="p5:ResultsValue" Name="result" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,856" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[result.Confidence &lt; 0.9]" DisplayName="If Extrcted confidence is lower than threshold" sap:VirtualizedContainerService.HintSize="510.4,766.4" sap2010:WorkflowViewState.IdRef="If_2">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="476.8,583.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <p:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[ExctractedResult]" DisplayName="Present Validation Station" DocumentObjectModel="[DocObjectModel]" DocumentPath="[DocPath]" DocumentText="[DocText]" sap:VirtualizedContainerService.HintSize="433.6,372" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[DocTaxonomy]" ValidatedExtractionResults="[ValidatedExtractionResult]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="p5:ExtractionResult">[ExctractedResult]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="p5:ExtractionResult">[ValidatedExtractionResult]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ForEach>
+                      <p6:ExportExtractionResults DataSet="[Dataset]" DisplayName="Export Extraction Results" ExtractionResult="[ExctractedResult]" sap:VirtualizedContainerService.HintSize="433.6,68.8" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="False" IncludeOCRConfidence="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </p6:ExportExtractionResults>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Writimg Document's Field to Excel &quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                      <Assign DisplayName="Get Document Type" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[DocType]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[ExctractedResult.GetDocumentType]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Save Extracted files in Account, KYC, Credit folder respectively.&#xD;&#xA;" DisplayName="Save file in Specific Folder" Expression="[DocType.Replace(&quot;Bank.Forms.&quot;,&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,128.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" x:Key="BankAccountOpening" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="410.4,423.2" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Dataset.Tables]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="sd2:DataTable">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd2:DataTable" Name="DataTable" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,205.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[DataTable.TableName]" WorkbookPath="[&quot;Data\Output\&quot;+&quot;\Account\&quot;+Path.GetFileNameWithoutExtension(DocPath)+&quot;.xlsx&quot;]" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" x:Key="CreditCardApplicationform" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="410.4,423.2" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[Dataset.Tables]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="sd2:DataTable">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd2:DataTable" Name="DataTable" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,205.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[DataTable.TableName]" WorkbookPath="[&quot;Data\Output\&quot;+&quot;\CreditCard\&quot;+Path.GetFileNameWithoutExtension(DocPath)+&quot;.xlsx&quot;]" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" x:Key="KYCForm" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="410.4,423.2" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[Dataset.Tables]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="sd2:DataTable">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd2:DataTable" Name="DataTable" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,205.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[DataTable.TableName]" WorkbookPath="[&quot;Data\Output\&quot;+&quot;\KYC\&quot;+Path.GetFileNameWithoutExtension(DocPath)+&quot;.xlsx&quot;]" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                      </Switch>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEach>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
