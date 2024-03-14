@@ -1,14 +1,10 @@
-Sure, here's a complete README in raw Markdown format:
-
-```markdown
 # Document Processing with UiPath Document Understanding: Extracting Fields from Credit Card Applications and Bank Account Opening Forms
 
-This project aims to automate the processing of Credit Card Applications and Bank Account Opening forms for a local bank, utilizing UiPath Document Understanding capabilities. By automating the extraction of key fields from these documents, the bank can significantly improve its operational efficiency.
+A local bank is looking at automating some of their incoming documents to improve the efficiency of the process. The documents lined up for the automation include Credit Card Applications and Bank Account Opening forms.  
 
-## Introduction
+The PDF document sent to the respective department includes either the credit card application form or the account opening form. Usually, the account opening form is followed by a Know Your Customer (KYC) form. The order in which these documents are attached in the PDF file may differ. 
 
-The PDF documents received by the bank may contain either Credit Card Applications or Bank Account Opening forms. Sometimes, the Bank Account Opening form is accompanied by a Know Your Customer (KYC) form. This project focuses on accurately extracting relevant fields from these documents and generating Excel files for further processing.
-
+We need to extract the fields from the documents and generate a Document Understanding workflow to process the documents by generating the extracted results in Excel files.
 ## Dependencies
 
 To execute this project successfully, ensure the following dependencies are met:
