@@ -11,7 +11,7 @@ To execute this project successfully, ensure the following dependencies are met:
 
 1. **UiPath Studio**: UiPath Studio is required to open and modify the provided workflow file.
 
-2. ** Packages ** : 
+2. **Package**: 
     1. UiPath.DocumentUnderstanding.ML.Activities
     2. UiPath.IntelligentOCR.Activities
     3. UiPath.UIAutomation.Activities
